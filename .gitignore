@@ -1,0 +1,10 @@
+node_modules
+config.json
+npm-debug.log
+
+# Intellij - WebStorm
+.idea/
+*.iml
+*.iws
+
+app/bundle.js
