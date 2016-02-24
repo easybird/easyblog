@@ -1,9 +1,107 @@
 <html>
 <head>
-<title>Easyblog</title>
+    <title>Easyblog</title>
+    <!-- Compiled and minified CSS -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+    <link rel="stylesheet" href="./style/quil-style.css"/>
+    <link rel="stylesheet" href="//cdn.quilljs.com/0.20.1/quill.snow.css"/>
+
 </head>
 <body>
-<h1>Easyblog with webpack!</h1>
+<div class="container">
+    <div class="row">
+        <h4>Easyblog with webpack!</h4>
+
+        <div class="col s6">
+            <div class="card quill-wrapper">
+                <div id="toolbar-toolbar" class="toolbar">
+                     <span class="ql-format-group">
+                        <select title="Font" class="ql-font">
+                            <option value="sans-serif" selected="">Sans Serif</option>
+                            <option value="serif">Serif</option>
+                            <option value="monospace">Monospace</option>
+                        </select>
+                        <select title="Size" class="ql-size">
+                            <option value="10px">Small</option>
+                            <option value="13px" selected="">Normal</option>
+                            <option value="20px">Large</option>
+                            <option value="24px">Paragraph subTitle</option>
+                            <option value="26px">Paragraph header</option>
+                            <option value="32px">SubTitle</option>
+                            <option value="32px">Title</option>
+                        </select>
+                     </span>
+                     <span class="ql-format-group">
+                     <span title="Bold" class="ql-format-button ql-bold"></span>
+                     <span class="ql-format-separator"></span>
+                     <span title="Italic" class="ql-format-button ql-italic"></span>
+                     <span class="ql-format-separator"></span>
+                     <span title="Underline" class="ql-format-button ql-underline"></span>
+                     <span class="ql-format-separator"></span>
+                     <span title="Strikethrough" class="ql-format-button ql-strike"></span>
+                     </span>
+                     <span class="ql-format-group">
+                        <span title="List" class="ql-format-button ql-list"></span>
+                        <span class="ql-format-separator"></span>
+                        <span title="Bullet" class="ql-format-button ql-bullet"></span>
+                        <span class="ql-format-separator"></span>
+                        <select title="Text Alignment" class="ql-align">
+                            <option value="left" label="Left" selected=""></option>
+                            <option value="center" label="Center"></option>
+                            <option value="right" label="Right"></option>
+                            <option value="justify" label="Justify"></option>
+                        </select>
+                     </span>
+                    <span class="ql-format-group">
+                        <span class="ql-format-button ql-image"></span>
+                        <span class="ql-format-button ql-link"></span>
+                    </span>
+                </div>
+                <div id="toolbar-editor" class="editor">
+                    <div>Easyblog</div>
+                </div>
+            </div>
+        </div>
+        <div class="card col s6">
+            <pre class="prettyprint" style="border:none">
+                <div id="jsonContent">
+                    <p> Hier komt de json!</p>
+                </div>
+            </pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="card col s6">
+            <div id="prettyHtml">
+                <p> Hier komt html!</p>
+            </div>
+        </div>
+        <div class="card col s6">
+            <textarea id="rawHtml" class="prettyprint" style="border:none">
+                <p> Hier komt html!</p>
+            </textarea>
+        </div>
+    </div>
+</div>
+<!-- Include the Quill library -->
+<script src="//cdn.quilljs.com/0.20.1/quill.js"></script>
+<!-- Initialize Quill editor -->
+<script>
+    var quill = new Quill('#toolbar-editor', {
+                modules: {
+                    toolbar: {container: '#toolbar-toolbar'},
+                    'image-tooltip': true,
+                    'link-tooltip': true
+                }, theme: 'snow'
+            }
+    );
+</script>
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script src="https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
 <script src="./bundle.js"></script>
 </body>
 </html>
