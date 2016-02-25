@@ -6,14 +6,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
 
     <link rel="stylesheet" href="./style/quil-style.css"/>
+    <link rel="stylesheet" href="./style/trix.css"/>
     <link rel="stylesheet" href="//cdn.quilljs.com/0.20.1/quill.snow.css"/>
-
 </head>
 <body>
 <div class="container">
     <div class="row">
         <h4>Easyblog with webpack!</h4>
-
+        <div class="row">
+        <div class="col s12">
+            <trix-editor></trix-editor>
+        </div>
+        </div>
         <div class="col s6">
             <div class="card quill-wrapper">
                 <div id="toolbar-toolbar" class="toolbar">
@@ -99,9 +103,10 @@
     );
 </script>
 <!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
-<script src="https://code.angularjs.org/2.0.0-beta.7/angular2.dev.js"></script>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="./scripts/trix.js"></script>
 <script src="./bundle.js"></script>
 </body>
 </html>

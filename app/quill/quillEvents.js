@@ -12,7 +12,7 @@ var refreshRawHtml = function () {
 
 function addQuillEvents() {
     quill.on('text-change', function (delta, source) {
-        console.log('Editor contents have changed', delta);
+        //console.log('Editor contents have changed', delta);
         refreshJsonContent();
         refreshHtml();
         refreshRawHtml();
