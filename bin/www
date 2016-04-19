@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var Promise = require("bluebird");
+var endOfLine = require('os').EOL;
 
 /**
  * Module dependencies.
@@ -9,15 +10,32 @@ compileFrontEnd()
     .then(compileBackEnd)
     .then(startUpDb)
     .then(startExpress)
+    .then(function () {
+        console.log(
+            endOfLine +
+            "Express Started." +
+            endOfLine
+        );
+    })
     .catch(function (err) {
         console.log("Unable to startup the express server: " + err);
     });
 
 
 function compileFrontEnd() {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function (resolve) {
         console.log("Start compiling front-end...");
-        return resolve();
+        var webpack = require('webpack');
+        var webpackConfig = process.env.NODE_ENV === "production" ? require('../webpack.prod.config.js') : require('../webpack.config.js');
+
+        return webpack(webpackConfig, function (err, stats) {
+            var jsonStats = stats.toJson();
+            if (err) throw new Error(err);
+            if (jsonStats.errors.length > 0) throw new Error(jsonStats.errors);
+            if (jsonStats.warnings.length > 0)
+                console.log(jsonStats.warnings);
+            return resolve();
+        });
     })
 }
 
@@ -26,7 +44,7 @@ function compileBackEnd() {
         console.log("Start compiling back-end...");
         require("babel-register")({
             ignore: [/node_modules/, /public\/javascripts/],
-            presets: ["es2015"]
+            presets: ["es2015", "react"]
         });
         return resolve();
     })
@@ -45,10 +63,8 @@ function startExpress() {
         console.log("Starting up express...");
 
         var app = require('../app');
-        console.log("end app: ")
         var debug = require('debug')('easyblog:server');
         var http = require('http');
-        console.log("Starting up express...");
 
         /**
          * Get port from environment and store in Express.
@@ -59,7 +75,6 @@ function startExpress() {
         /**
          * Create HTTP server.
          */
-        console.log("Starting up express...");
 
         var server = http.createServer(app);
 
@@ -70,7 +85,6 @@ function startExpress() {
         server.listen(port);
         server.on('error', onError);
         server.on('listening', onListening);
-        console.log("Starting up express...");
 
         /**
          * Normalize a port into a number, string, or false.

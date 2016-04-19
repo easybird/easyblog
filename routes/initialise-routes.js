@@ -1,7 +1,5 @@
-import routes from './index';
-import users from './users';
+import welcome from './welcome-routes.js';
 
 export function initRoutes(app) {
-    app.use('/', routes);
-    app.use('/users', users);
+    app.use('/', welcome);
 }

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  div#welcome-app
+      !=react.renderedApp
+
+block append javascripts
+    script.
+        var welcomeProps = !{JSON.stringify(react.initProps).replace(/<\//g, "<\\/")};
+    script(type = 'text/javascript' src=react.bundle)
