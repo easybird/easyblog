@@ -1,0 +1,137 @@
+#!/usr/bin/env node
+var Promise = require("bluebird");
+
+/**
+ * Module dependencies.
+ */
+
+compileFrontEnd()
+    .then(compileBackEnd)
+    .then(startUpDb)
+    .then(startExpress)
+    .catch(function (err) {
+        console.log("Unable to startup the express server: " + err);
+    });
+
+
+function compileFrontEnd() {
+    return new Promise(function (resolve, reject) {
+        console.log("Start compiling front-end...");
+        return resolve();
+    })
+}
+
+function compileBackEnd() {
+    return new Promise(function (resolve, reject) {
+        console.log("Start compiling back-end...");
+        require("babel-register")({
+            ignore: [/node_modules/, /public\/javascripts/],
+            presets: ["es2015"]
+        });
+        return resolve();
+    })
+}
+
+function startUpDb() {
+    return new Promise(function (resolve, reject) {
+        console.log("Starting up DB...");
+        return resolve();
+    })
+}
+
+function startExpress() {
+
+    return new Promise(function (resolve, reject) {
+        console.log("Starting up express...");
+
+        var app = require('../app');
+        console.log("end app: ")
+        var debug = require('debug')('easyblog:server');
+        var http = require('http');
+        console.log("Starting up express...");
+
+        /**
+         * Get port from environment and store in Express.
+         */
+
+        var port = normalizePort(process.env.PORT || '3000');
+        app.set('port', port);
+        /**
+         * Create HTTP server.
+         */
+        console.log("Starting up express...");
+
+        var server = http.createServer(app);
+
+        /**
+         * Listen on provided port, on all network interfaces.
+         */
+
+        server.listen(port);
+        server.on('error', onError);
+        server.on('listening', onListening);
+        console.log("Starting up express...");
+
+        /**
+         * Normalize a port into a number, string, or false.
+         */
+
+        function normalizePort(val) {
+            var port = parseInt(val, 10);
+
+            if (isNaN(port)) {
+                // named pipe
+                return val;
+            }
+
+            if (port >= 0) {
+                // port number
+                return port;
+            }
+
+            return false;
+        }
+
+        /**
+         * Event listener for HTTP server "error" event.
+         */
+
+        function onError(error) {
+            if (error.syscall !== 'listen') {
+                throw error;
+            }
+
+            var bind = typeof port === 'string'
+                ? 'Pipe ' + port
+                : 'Port ' + port;
+
+            // handle specific listen errors with friendly messages
+            switch (error.code) {
+                case 'EACCES':
+                    console.error(bind + ' requires elevated privileges');
+                    process.exit(1);
+                    break;
+                case 'EADDRINUSE':
+                    console.error(bind + ' is already in use');
+                    process.exit(1);
+                    break;
+                default:
+                    throw error;
+            }
+        }
+
+        /**
+         * Event listener for HTTP server "listening" event.
+         */
+
+        function onListening() {
+            var addr = server.address();
+            var bind = typeof addr === 'string'
+                ? 'pipe ' + addr
+                : 'port ' + addr.port;
+            debug('Listening on ' + bind);
+        }
+
+        return resolve();
+    });
+}
