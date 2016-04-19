@@ -1,8 +1,5 @@
-module.exports = {
-context: __dirname + '/app',
-entry: './index.js',
-output: {
-path: __dirname + '/app',
-filename: 'bundle.js'  
-}
-};
+var config = require("./webpack.prod.config.js");
+
+config.devtool = 'eval';
+
+module.exports = config;
