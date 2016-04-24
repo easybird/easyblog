@@ -1,5 +1,5 @@
 import React from 'react';
-import DraftEditor from './draft-editor.js';
+import DraftEditor from './editor/draft-editor.js';
 import RenderedResult from './rendered-result.js';
 import { getBlockStyle, styleMap} from './constants/styles.js';
 import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
