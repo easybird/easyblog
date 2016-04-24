@@ -1,5 +1,9 @@
 extends layout
 
+block append stylesheets
+    link(href="/Draft.css" rel="stylesheet")
+    link(href="/stylesheets/rich-editor.css" rel="stylesheet")
+
 block content
   div#welcome-app
       !=react.renderedApp

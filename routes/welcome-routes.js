@@ -3,6 +3,7 @@ import ReactDOMServer from 'react-dom/server';
 import React from 'react';
 import Welcome from '../frontend-app/welcome-app/welcome.js';
 import config from '../config.json';
+import rawDraft from '../data/rawDraft.json';
 
 var router = express.Router();
 
@@ -13,7 +14,8 @@ router.get('/',
 
 function compileReactWelcomeApp(req, res, next) {
     var props = {
-        title: 'Welcome to Easyblog!'
+        title: 'Welcome to Easyblog!',
+        initialRawDraft: rawDraft
     };
 
     try {

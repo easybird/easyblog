@@ -6,3 +6,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+.RichViewer {
+    cursor: text;
+    font-size: 16px;
+    margin-top: 10px;
+}
