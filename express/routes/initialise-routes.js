@@ -1,5 +1,5 @@
 import welcome from './welcome-routes.js';
 
-export function initRoutes(app) {
+export default function(app) {
     app.use('/', welcome);
 }

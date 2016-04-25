@@ -37,7 +37,7 @@ class Welcome extends React.Component {
 
         return (
             <div>
-                <h4>Draft.js editor example: {title}</h4>
+                <h2>Draft.js editor example: {title}</h2>
                 <DraftEditor
                     onSaveDraft={ onSaveDraft }
                     blockStyleFn={ blockStyleFn}

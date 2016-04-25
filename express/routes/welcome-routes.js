@@ -1,20 +1,33 @@
 import express from 'express';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
-import Welcome from '../frontend-app/welcome-app/welcome.js';
-import config from '../config.json';
-import rawDraft from '../data/rawDraft.json';
+import Welcome from '../../frontend-app/welcome-app/welcome.js';
+import rawDraft from '../../data/rawDraft.json';
+import { LAYOUT, REACT } from '../../config-loader.js';
 
 var router = express.Router();
 
 router.get('/',
+    addInitialRenderData,
     compileReactWelcomeApp,
     renderHomePage
 );
 
+export function addInitialRenderData(req, res, next) {
+    req.renderData = {
+        metaData: {
+            title: 'Welcome to Easyblog!',
+            description: 'This is a javascript modern blogging framework'
+        },
+        layout: LAYOUT
+    };
+
+    return next();
+}
+
 function compileReactWelcomeApp(req, res, next) {
     var props = {
-        title: 'Welcome to Easyblog!',
+        title: req.renderData.metaData.title,
         initialRawDraft: rawDraft
     };
 
@@ -29,7 +42,7 @@ function compileReactWelcomeApp(req, res, next) {
     (!req.renderData) ? req.renderData = {} : undefined;
     req.renderData.react = {
         renderedApp: welcomeApp,
-        bundle: config.react.htmlDir + config.react.components.welcome.bundle,
+        bundle: REACT.htmlDir + REACT.components.welcome.bundle,
         initProps: props
     };
 
