@@ -37,19 +37,29 @@ class Welcome extends React.Component {
 
         return (
             <div>
-                <h2>Draft.js editor example: {title}</h2>
-                <DraftEditor
-                    onSaveDraft={ onSaveDraft }
-                    blockStyleFn={ blockStyleFn}
-                    customStyleMap= {customStyleMap}
-                    initialRawDraft={initialRawDraft}
-                />
-                <h4> End of the draft editor example </h4>
-                <RenderedResult
-                    blockStyleFn={blockStyleFn}
-                    customStyleMap={customStyleMap}
-                    rawDraft={rawDraft}
-                />
+                <h2 className="header">{title}</h2>
+                <h5 className="header">Here is an example of the draft-js framework of facebook:</h5>
+                <div className="section" />
+                <div className= "container">
+                    <div className= "row">
+                        <div className= "col s12 l6">
+                            <DraftEditor
+                                onSaveDraft={ onSaveDraft }
+                                blockStyleFn={ blockStyleFn}
+                                customStyleMap= {customStyleMap}
+                                initialRawDraft={initialRawDraft}
+                            />
+                        </div>
+                        <div className= "col s12 l6">
+
+                            <RenderedResult
+                                blockStyleFn={blockStyleFn}
+                                customStyleMap={customStyleMap}
+                                rawDraft={rawDraft}
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }

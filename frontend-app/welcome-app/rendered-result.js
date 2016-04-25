@@ -27,8 +27,8 @@ class RenderedResult extends React.Component {
 
         return (
             <div>
-                <h4> Rendered result: </h4>
-                <div className='RichViewer'>
+                <h4 className="header"> Rendered result: </h4>
+                <div className='card RichViewer'>
                     <Editor
                         blockStyleFn={blockStyleFn}
                         readOnly={true}
