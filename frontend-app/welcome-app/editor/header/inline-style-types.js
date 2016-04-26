@@ -3,4 +3,5 @@ export const INLINE_STYLES = [
     {label: 'Italic', style: 'ITALIC'},
     {label: 'Underline', style: 'UNDERLINE'},
     {label: 'Monospace', style: 'CODE'},
+    {label: 'Strikethrough', style: 'STRIKETHROUGH'},
 ];

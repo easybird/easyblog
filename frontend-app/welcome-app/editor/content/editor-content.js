@@ -5,6 +5,8 @@ class EditorContent extends React.Component {
 
     constructor(props) {
         super(props);
+
+        this.focus = () => this.refs.editor.focus();
         this.handleKeyCommand = (command) => this._handleKeyCommand(command);
     }
 
@@ -26,7 +28,7 @@ class EditorContent extends React.Component {
 
         // If the user changes block type before entering any text, we can
         // either style the placeholder or hide it. Let's just hide it now.
-        let className = 'RichEditor-editor';
+        let className = 'RichEditor-content';
         var contentState = editorState.getCurrentContent();
         if (!contentState.hasText()) {
             if (contentState.getBlockMap().first().getType() !== 'unstyled') {
@@ -55,6 +57,6 @@ EditorContent.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
     editorState: React.PropTypes.object.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
 };
 export default EditorContent;

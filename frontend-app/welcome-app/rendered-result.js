@@ -25,10 +25,12 @@ class RenderedResult extends React.Component {
         const { blockStyleFn } = this.props;
         const { customStyleMap } = this.props;
 
+        let className = 'card RichEditor-content';
+
         return (
             <div>
                 <h4 className="header"> Rendered result: </h4>
-                <div className='card RichViewer'>
+                <div className={className}>
                     <Editor
                         blockStyleFn={blockStyleFn}
                         readOnly={true}

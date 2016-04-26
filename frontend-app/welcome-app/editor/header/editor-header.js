@@ -1,8 +1,8 @@
 import React from 'react';
-import { BlockStyleControls }from './block-style-controls.js';
-import { InlineStyleControls } from './inline-style-controls.js';
+import { BlockStyleHeaderControls }from './controls/block-style-header-controls.js';
+import { InlineStyleHeaderControls } from './controls/inline-style-header-controls.js';
+import LinkHeaderControls from './controls/link-header-controls.js';
 import { RichUtils } from 'draft-js';
-
 
 class EditorHeader extends React.Component {
 
@@ -10,6 +10,17 @@ class EditorHeader extends React.Component {
         super(props);
         this.toggleBlockType = (type) => this._toggleBlockType(type);
         this.toggleInlineStyle = (style) => this._toggleInlineStyle(style);
+        this.toggleLink = (entityKey) => this._toggleLink(entityKey);
+    }
+
+    _toggleLink(entityKey) {
+        this.props.onChange(
+            RichUtils.toggleLink(
+                this.props.editorState,
+                this.props.editorState.getSelection(),
+                entityKey
+            )
+        )
     }
 
     _toggleBlockType(blockType) {
@@ -31,25 +42,33 @@ class EditorHeader extends React.Component {
     }
 
     render() {
-        const {editorState} = this.props;
+        const {editorState, onFocus} = this.props;
+
         return (
-            <div>
-                <BlockStyleControls
+            <div className="RichEditor-header">
+                <BlockStyleHeaderControls
                     editorState={editorState}
                     onToggle={this.toggleBlockType}
                 />
-                <InlineStyleControls
+                <InlineStyleHeaderControls
                     editorState={editorState}
                     onToggle={this.toggleInlineStyle}
+                />
+                <LinkHeaderControls
+                    editorState={editorState}
+                    onToggle={this.toggleLink}
+                    onFocus={onFocus}
                 />
             </div>
         )
     }
+
 }
 
 EditorHeader.propTypes = {
     editorState: React.PropTypes.object.isRequired,
-    onChange: React.PropTypes.func.isRequired
+    onChange: React.PropTypes.func.isRequired,
+    onFocus: React.PropTypes.func.isRequired
 };
 
 export default EditorHeader;

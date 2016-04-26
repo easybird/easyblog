@@ -12,7 +12,7 @@ class DraftEditor extends React.Component {
             editorState: createEditorStateFromRawDraft(props.initialRawDraft)
         };
 
-        this.focus = () => this.refs.editor.focus();
+        this.focus = () => this.refs.editorContent.focus();
         this.onChange = (editorState) => this.setState({editorState});
         this.saveDraft = (e) => this.props.onSaveDraft(this.state.editorState);
     }
@@ -22,16 +22,19 @@ class DraftEditor extends React.Component {
 
         return (
             <div>
-                <div className="RichEditor-root">
+                <div className="card RichEditor-root">
                     < EditorHeader
                         editorState={editorState}
                         onChange={this.onChange}
+                        onFocus={this.focus}
                     />
                     < EditorContent
+                        onClick={this.focus}
                         blockStyleFn={this.props.blockStyleFn}
                         customStyleMap={this.props.customStyleMap}
                         editorState={editorState}
                         onChange={this.onChange}
+                        ref="editorContent"
                     />
                 </div>
                 <div>

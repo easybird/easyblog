@@ -2,8 +2,9 @@ import express from 'express';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
 import Welcome from '../../frontend-app/welcome-app/welcome.js';
+import { addInitialRenderData } from '../../middleware/rendering/render-data.js';
 import rawDraft from '../../data/rawDraft.json';
-import { LAYOUT, REACT } from '../../config-loader.js';
+import { REACT } from '../../config-loader.js';
 
 var router = express.Router();
 
@@ -12,18 +13,6 @@ router.get('/',
     compileReactWelcomeApp,
     renderHomePage
 );
-
-export function addInitialRenderData(req, res, next) {
-    req.renderData = {
-        metaData: {
-            title: 'Welcome to Easyblog!',
-            description: 'This is a javascript modern blogging framework'
-        },
-        layout: LAYOUT
-    };
-
-    return next();
-}
 
 function compileReactWelcomeApp(req, res, next) {
     var props = {

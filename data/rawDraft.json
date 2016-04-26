@@ -1,5 +1,11 @@
 {
-  "entityMap": {},
+  "entityMap": {
+    "0": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {"url": "mijioj"}
+    }
+  },
   "blocks": [
     {
       "key": "ejddc",
@@ -27,7 +33,13 @@
           "style": "BOLD"
         }
       ],
-      "entityRanges": []
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 4,
+          "key": 0
+        }
+      ]
     },
     {
       "key": "6d1m8",

@@ -1,8 +1,8 @@
 import React from 'react';
-import StyleButton from './style-button.js';
-import { BLOCK_TYPES } from './block-types.js';
+import StyleButton from '../style-button.js';
+import { BLOCK_TYPES } from '../block-types.js';
 
-export const BlockStyleControls = (props) => {
+export const BlockStyleHeaderControls = (props) => {
     const {editorState} = props;
     const selection = editorState.getSelection();
     const blockType = editorState
@@ -11,7 +11,7 @@ export const BlockStyleControls = (props) => {
         .getType();
 
     return (
-        <div className="RichEditor-controls">
+        <div className="RichEditor-header-controls">
             {BLOCK_TYPES.map((type) =>
                     <StyleButton
                         key={type.label}
