@@ -2,6 +2,7 @@ import React from 'react';
 import { BlockStyleHeaderControls }from './controls/block-style-header-controls.js';
 import { InlineStyleHeaderControls } from './controls/inline-style-header-controls.js';
 import LinkHeaderControls from './controls/link-header-controls.js';
+import MediaHeaderControls from './controls/media-header-controls.js';
 import { RichUtils } from 'draft-js';
 
 class EditorHeader extends React.Component {
@@ -10,17 +11,7 @@ class EditorHeader extends React.Component {
         super(props);
         this.toggleBlockType = (type) => this._toggleBlockType(type);
         this.toggleInlineStyle = (style) => this._toggleInlineStyle(style);
-        this.toggleLink = (entityKey) => this._toggleLink(entityKey);
-    }
-
-    _toggleLink(entityKey) {
-        this.props.onChange(
-            RichUtils.toggleLink(
-                this.props.editorState,
-                this.props.editorState.getSelection(),
-                entityKey
-            )
-        )
+        this.onChange = (editorState) => this.props.onChange(editorState);
     }
 
     _toggleBlockType(blockType) {
@@ -56,7 +47,12 @@ class EditorHeader extends React.Component {
                 />
                 <LinkHeaderControls
                     editorState={editorState}
-                    onToggle={this.toggleLink}
+                    onChange={this.onChange}
+                    onFocus={onFocus}
+                />
+                <MediaHeaderControls
+                    editorState={editorState}
+                    onChange={this.onChange}
                     onFocus={onFocus}
                 />
             </div>

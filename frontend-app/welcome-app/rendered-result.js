@@ -2,7 +2,6 @@ import React from 'react';
 import { Editor, EditorState } from 'draft-js';
 import { createEditorStateFromRawDraft} from './helpers/convert-editor-state.js';
 
-
 class RenderedResult extends React.Component {
 
     constructor(props) {
@@ -23,6 +22,7 @@ class RenderedResult extends React.Component {
         const {editorState} = this.state;
 
         const { blockStyleFn } = this.props;
+        const { blockRendererFn } = this.props;
         const { customStyleMap } = this.props;
 
         let className = 'card RichEditor-content';
@@ -33,6 +33,7 @@ class RenderedResult extends React.Component {
                 <div className={className}>
                     <Editor
                         blockStyleFn={blockStyleFn}
+                        blockRendererFn={blockRendererFn}
                         readOnly={true}
                         customStyleMap={customStyleMap}
                         editorState={editorState}
@@ -45,6 +46,7 @@ class RenderedResult extends React.Component {
 
 RenderedResult.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
+    blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
     rawDraft: React.PropTypes.object.isRequired
 };

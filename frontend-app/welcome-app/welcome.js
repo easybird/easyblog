@@ -1,7 +1,7 @@
 import React from 'react';
 import DraftEditor from './editor/draft-editor.js';
 import RenderedResult from './rendered-result.js';
-import { getBlockStyle, styleMap} from './constants/styles.js';
+import { getBlockStyle, styleMap, getMediaBlockObject} from './constants/styles.js';
 import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
 
 class Welcome extends React.Component {
@@ -32,6 +32,7 @@ class Welcome extends React.Component {
         const {title} = this.props;
 
         const blockStyleFn = getBlockStyle;
+        const blockRendererFn = getMediaBlockObject;
         const customStyleMap = styleMap;
         const onSaveDraft = this._onSaveDraft;
 
@@ -46,6 +47,7 @@ class Welcome extends React.Component {
                             <DraftEditor
                                 onSaveDraft={ onSaveDraft }
                                 blockStyleFn={ blockStyleFn}
+                                blockRendererFn={blockRendererFn}
                                 customStyleMap= {customStyleMap}
                                 initialRawDraft={initialRawDraft}
                             />
@@ -54,6 +56,7 @@ class Welcome extends React.Component {
 
                             <RenderedResult
                                 blockStyleFn={blockStyleFn}
+                                blockRendererFn={blockRendererFn}
                                 customStyleMap={customStyleMap}
                                 rawDraft={rawDraft}
                             />

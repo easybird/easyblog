@@ -22,6 +22,7 @@ class EditorContent extends React.Component {
 
     render() {
         const {blockStyleFn} =this.props;
+        const {blockRendererFn} =this.props;
         const {customStyleMap} = this.props;
         const { onChange } = this.props;
         const {editorState} = this.props;
@@ -39,6 +40,7 @@ class EditorContent extends React.Component {
         return (
             <div className={className} onClick={this.focus}>
                 <Editor
+                    blockRendererFn={blockRendererFn}
                     blockStyleFn={blockStyleFn}
                     customStyleMap={customStyleMap}
                     editorState={editorState}
@@ -55,6 +57,7 @@ class EditorContent extends React.Component {
 
 EditorContent.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
+    blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
     editorState: React.PropTypes.object.isRequired,
     onChange: React.PropTypes.func.isRequired,

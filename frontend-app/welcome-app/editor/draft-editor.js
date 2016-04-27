@@ -31,6 +31,7 @@ class DraftEditor extends React.Component {
                     < EditorContent
                         onClick={this.focus}
                         blockStyleFn={this.props.blockStyleFn}
+                        blockRendererFn={this.props.blockRendererFn}
                         customStyleMap={this.props.customStyleMap}
                         editorState={editorState}
                         onChange={this.onChange}
@@ -49,6 +50,7 @@ class DraftEditor extends React.Component {
 
 DraftEditor.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
+    blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
     initialRawDraft: React.PropTypes.object.isRequired,
     onSaveDraft: React.PropTypes.func.isRequired

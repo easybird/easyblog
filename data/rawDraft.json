@@ -1,14 +1,59 @@
 {
   "entityMap": {
     "0": {
+      "type": "image",
+      "mutability": "IMMUTABLE",
+      "data": {"src": "http://localhost:3000/media/sample.jpg"}
+    },
+    "1": {
       "type": "LINK",
       "mutability": "MUTABLE",
       "data": {"url": "mijioj"}
+    },
+    "2": {
+      "type": "audio",
+      "mutability": "IMMUTABLE",
+      "data": {"src": "http://localhost:3000/media/sample.mp3"}
+    },
+    "3": {
+      "type": "video",
+      "mutability": "IMMUTABLE",
+      "data": {"src": "http://localhost:3000/media/sample.mp4"}
     }
   },
   "blocks": [
     {
       "key": "ejddc",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "3d87s",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 0
+        }
+      ]
+    },
+    {
+      "key": "bihqe",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "9tj9d",
       "text": "test",
       "type": "unstyled",
       "depth": 0,
@@ -37,12 +82,42 @@
         {
           "offset": 0,
           "length": 4,
-          "key": 0
+          "key": 1
         }
       ]
     },
     {
       "key": "6d1m8",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "crmoh",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "bssa6",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 2
+        }
+      ]
+    },
+    {
+      "key": "8v560",
       "text": "",
       "type": "unstyled",
       "depth": 0,
@@ -109,6 +184,44 @@
     },
     {
       "key": "4v3tq",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "9kegn",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "ah21e",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 3
+        }
+      ]
+    },
+    {
+      "key": "7p6jv",
+      "text": "",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "4q8vc",
       "text": "",
       "type": "unstyled",
       "depth": 0,

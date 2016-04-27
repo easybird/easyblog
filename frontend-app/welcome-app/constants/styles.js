@@ -1,3 +1,5 @@
+import { Media } from '../composite-decorators/media/media.js';
+
 // Custom overrides for "code" style.
 export const styleMap = {
     CODE: {
@@ -16,6 +18,18 @@ export function getBlockStyle(block) {
     switch (block.getType()) {
         case 'blockquote':
             return 'RichEditor-blockquote';
+        default:
+            return null;
+    }
+}
+
+export function getMediaBlockObject(block) {
+    switch (block.getType()) {
+        case 'atomic':
+            return {
+                component: Media,
+                editable: false,
+            };
         default:
             return null;
     }

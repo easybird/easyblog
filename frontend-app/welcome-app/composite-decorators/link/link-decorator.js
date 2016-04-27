@@ -11,7 +11,7 @@ export const linkDecorator = new CompositeDecorator([
 ]);
 
 export function getCurrentUrl(editorState) {
-    let url = 'http://www.';
+    let url = '';
 
     const selection = editorState.getSelection();
     const anchorKey = selection.getAnchorKey();
@@ -30,8 +30,8 @@ export function getCurrentUrl(editorState) {
     return url;
 }
 
-export function createLinkEntity(urlValue) {
-    return Entity.create(DECORATOR_TYPE, 'MUTABLE', {url: urlValue});
+export function createLinkEntity(url) {
+    return Entity.create(DECORATOR_TYPE, 'MUTABLE', {url});
 }
 
 
