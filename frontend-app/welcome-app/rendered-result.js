@@ -10,7 +10,11 @@ class RenderedResult extends React.Component {
         this.state = {
             editorState: createEditorStateFromRawDraft(props.rawDraft)
         };
+        this.getChildContext = () => {
+            return {articleState: 'FULL'}
+        }
     }
+
     componentWillReceiveProps(newProps) {
         if (newProps.rawDraft !== this.props.rawDraft) {
             this.setState({
@@ -18,6 +22,7 @@ class RenderedResult extends React.Component {
             })
         }
     }
+
     render() {
         const {editorState} = this.state;
 
@@ -43,6 +48,10 @@ class RenderedResult extends React.Component {
         );
     }
 }
+
+RenderedResult.childContextTypes = {
+    articleState: React.PropTypes.string
+};
 
 RenderedResult.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,

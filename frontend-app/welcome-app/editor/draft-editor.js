@@ -15,6 +15,10 @@ class DraftEditor extends React.Component {
         this.focus = () => this.refs.editorContent.focus();
         this.onChange = (editorState) => this.setState({editorState});
         this.saveDraft = (e) => this.props.onSaveDraft(this.state.editorState);
+
+        this.getChildContext = () => {
+            return {articleState: 'EDIT'}
+        }
     }
 
     render() {
@@ -47,6 +51,10 @@ class DraftEditor extends React.Component {
         );
     }
 }
+
+DraftEditor.childContextTypes = {
+    articleState: React.PropTypes.string
+};
 
 DraftEditor.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,

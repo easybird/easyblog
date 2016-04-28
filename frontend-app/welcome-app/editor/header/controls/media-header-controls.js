@@ -3,7 +3,7 @@ import { Entity, AtomicBlockUtils } from 'draft-js';
 import StyleButton from '../style-button.js';
 import UrlInputField from './url-input-field.js';
 
-const MEDIA = {AUDIO: 'audio', VIDEO: 'video', IMAGE: 'image'};
+const MEDIA = {AUDIO: 'audio', VIDEO: 'video', IMAGE: 'image', MORE_INFO: 'more-info'};
 
 class MediaHeaderControls extends React.Component {
 
@@ -18,6 +18,7 @@ class MediaHeaderControls extends React.Component {
         this.openAudioInput = this._openAudioInput.bind(this);
         this.openImageInput = this._openImageInput.bind(this);
         this.openVideoInput = this._openVideoInput.bind(this);
+        this.addMoreInfoTag = () => this._addMoreInfoTag();
 
         this.openUrlInputField = (type) => this._openUrlInputField(type);
 
@@ -39,6 +40,16 @@ class MediaHeaderControls extends React.Component {
 
     _openVideoInput() {
         this.openUrlInputField(MEDIA.VIDEO)
+    }
+
+    _addMoreInfoTag() {
+        this.props.onChange(
+            AtomicBlockUtils.insertAtomicBlock(
+                this.props.editorState,
+                Entity.create(MEDIA.MORE_INFO, 'IMMUTABLE', {text: 'Read more'}),
+                ' '
+            )
+        )
     }
 
     _openUrlInputField(type) {
@@ -118,6 +129,13 @@ class MediaHeaderControls extends React.Component {
                     active={type === MEDIA.VIDEO}
                     label='Add Video'
                     onToggle={this.openVideoInput}
+                    style={true}
+                />
+                <StyleButton
+                    key={MEDIA.MORE_INFO}
+                    active={false}
+                    label='Add More info label'
+                    onToggle={this.addMoreInfoTag}
                     style={true}
                 />
                     {urlInput}
