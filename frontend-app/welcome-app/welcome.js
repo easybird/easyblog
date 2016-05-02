@@ -1,7 +1,7 @@
 import React from 'react';
 import DraftEditor from './editor/draft-editor.js';
-import Article from './article.js';
-import ArticleOverview from './article-overview.js';
+import Article from './article/article.js';
+import ArticleOverview from './article/article-overview.js';
 import { getBlockStyle, styleMap, getMediaBlockObject} from './constants/styles.js';
 import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Editor, EditorState } from 'draft-js';
-import { createEditorStateFromRawDraft} from './helpers/convert-editor-state.js';
+import { createEditorStateFromRawDraft} from '../helpers/convert-editor-state.js';
 import _ from 'lodash';
-import { articleTypes } from './article/article-types.js';
+import { articleTypes } from './article-types.js';
 
 class Article extends React.Component {
 
