@@ -1,6 +1,7 @@
 import React from 'react';
 import DraftEditor from './editor/draft-editor.js';
-import RenderedResult from './rendered-result.js';
+import Article from './article.js';
+import ArticleOverview from './article-overview.js';
 import { getBlockStyle, styleMap, getMediaBlockObject} from './constants/styles.js';
 import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
 
@@ -52,13 +53,22 @@ class Welcome extends React.Component {
                                 initialRawDraft={initialRawDraft}
                             />
                         </div>
-                        <div className= "col s12 l6">
-
-                            <RenderedResult
+                        <div className= "col s12 l3">
+                            <ArticleOverview
                                 blockStyleFn={blockStyleFn}
                                 blockRendererFn={blockRendererFn}
                                 customStyleMap={customStyleMap}
                                 rawDraft={rawDraft}
+                                title="Small preview:"
+                            />
+                        </div>
+                        <div className= "col s12 l3">
+                            <Article
+                                blockStyleFn={blockStyleFn}
+                                blockRendererFn={blockRendererFn}
+                                customStyleMap={customStyleMap}
+                                rawDraft={rawDraft}
+                                title="Rendered result:"
                             />
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { Media } from '../composite-decorators/media/media.js';
+import { Media } from '../composite-decorators/atomic-blocks/media.js';
 
 // Custom overrides for "code" style.
 export const styleMap = {

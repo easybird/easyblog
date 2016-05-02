@@ -2,8 +2,7 @@ import React from 'react';
 import { Entity, AtomicBlockUtils } from 'draft-js';
 import StyleButton from '../style-button.js';
 import UrlInputField from './url-input-field.js';
-
-const MEDIA = {AUDIO: 'audio', VIDEO: 'video', IMAGE: 'image', MORE_INFO: 'more-info'};
+import { atomicBlockTypes } from '../../../composite-decorators/atomic-blocks/atomic-block-types.js';
 
 class MediaHeaderControls extends React.Component {
 
@@ -31,22 +30,24 @@ class MediaHeaderControls extends React.Component {
     }
 
     _openAudioInput() {
-        this.openUrlInputField(MEDIA.AUDIO)
+        this.openUrlInputField(atomicBlockTypes.AUDIO)
     }
 
     _openImageInput() {
-        this.openUrlInputField(MEDIA.IMAGE)
+        this.openUrlInputField(atomicBlockTypes.IMAGE)
     }
 
     _openVideoInput() {
-        this.openUrlInputField(MEDIA.VIDEO)
+        this.openUrlInputField(atomicBlockTypes.VIDEO)
     }
 
     _addMoreInfoTag() {
+        //TODO fix automatic extra line creation: https://github.com/facebook/draft-js/issues/327
+        //TODO if more-info already exist: remove it before adding new one!
         this.props.onChange(
             AtomicBlockUtils.insertAtomicBlock(
                 this.props.editorState,
-                Entity.create(MEDIA.MORE_INFO, 'IMMUTABLE', {text: 'Read more'}),
+                Entity.create(atomicBlockTypes.MORE_INFO, 'IMMUTABLE', {text: 'Read more'}),
                 ' '
             )
         )
@@ -111,28 +112,28 @@ class MediaHeaderControls extends React.Component {
         return (
             <div>
                 <StyleButton
-                    key={MEDIA.AUDIO}
-                    active={type === MEDIA.AUDIO}
+                    key={atomicBlockTypes.AUDIO}
+                    active={type === atomicBlockTypes.AUDIO}
                     label='Add Audio'
                     onToggle={this.openAudioInput}
                     style={true}
                 />
                 <StyleButton
-                    key={MEDIA.IMAGE}
-                    active={type === MEDIA.IMAGE}
+                    key={atomicBlockTypes.IMAGE}
+                    active={type === atomicBlockTypes.IMAGE}
                     label='Add Image'
                     onToggle={this.openImageInput}
                     style={true}
                 />
                 <StyleButton
-                    key={MEDIA.VIDEO}
-                    active={type === MEDIA.VIDEO}
+                    key={atomicBlockTypes.VIDEO}
+                    active={type === atomicBlockTypes.VIDEO}
                     label='Add Video'
                     onToggle={this.openVideoInput}
                     style={true}
                 />
                 <StyleButton
-                    key={MEDIA.MORE_INFO}
+                    key={atomicBlockTypes.MORE_INFO}
                     active={false}
                     label='Add More info label'
                     onToggle={this.addMoreInfoTag}

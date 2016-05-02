@@ -1,26 +1,37 @@
 import React from 'react';
 import { Editor, EditorState } from 'draft-js';
 import { createEditorStateFromRawDraft} from './helpers/convert-editor-state.js';
+import _ from 'lodash';
+import { articleTypes } from './article/article-types.js';
 
-class RenderedResult extends React.Component {
+class Article extends React.Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            editorState: createEditorStateFromRawDraft(props.rawDraft)
+            editorState: createEditorStateFromRawDraft(this.prepareDraft(props.rawDraft))
         };
         this.getChildContext = () => {
-            return {articleState: 'FULL'}
+            return {articleState: articleTypes.FULL}
         }
+    }
+
+    /** OVERWRITTEN IN ArticleOverview **/
+    prepareDraft(draft) {
+        return draft;
     }
 
     componentWillReceiveProps(newProps) {
         if (newProps.rawDraft !== this.props.rawDraft) {
             this.setState({
-                editorState: createEditorStateFromRawDraft(newProps.rawDraft)
-            })
+                editorState: createEditorStateFromRawDraft(
+                    this.prepareDraft(newProps.rawDraft)
+                )
+            });
         }
+
+
     }
 
     render() {
@@ -34,7 +45,7 @@ class RenderedResult extends React.Component {
 
         return (
             <div>
-                <h4 className="header"> Rendered result: </h4>
+                <h4 className="header"> {this.props.title} </h4>
                 <div className={className}>
                     <Editor
                         blockStyleFn={blockStyleFn}
@@ -49,15 +60,16 @@ class RenderedResult extends React.Component {
     }
 }
 
-RenderedResult.childContextTypes = {
+Article.childContextTypes = {
     articleState: React.PropTypes.string
 };
 
-RenderedResult.propTypes = {
+Article.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
     blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
-    rawDraft: React.PropTypes.object.isRequired
+    rawDraft: React.PropTypes.object.isRequired,
+    title: React.PropTypes.string.isRequired
 };
 
-export default RenderedResult;
+export default Article;

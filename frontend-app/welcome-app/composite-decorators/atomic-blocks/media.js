@@ -1,6 +1,7 @@
 import React from 'react';
 import { Entity } from 'draft-js';
 import MoreInfo from './more-info.js';
+import { atomicBlockTypes } from './atomic-block-types.js';
 
 const styles = {
     media: {
@@ -26,13 +27,13 @@ export const Media = (props) => {
     const type = entity.getType();
 
     let media;
-    if (type === 'audio') {
+    if (type === atomicBlockTypes.AUDIO) {
         media = <Audio src={src} />;
-    } else if (type === 'image') {
+    } else if (type === atomicBlockTypes.IMAGE) {
         media = <Image src={src} />;
-    } else if (type === 'video') {
+    } else if (type === atomicBlockTypes.VIDEO) {
         media = <Video src={src} />;
-    } else if (type === 'more-info') {
+    } else if (type === atomicBlockTypes.MORE_INFO) {
         const {text} = entity.getData();
         media = <MoreInfo text={text}/>
     }

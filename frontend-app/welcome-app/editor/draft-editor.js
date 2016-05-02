@@ -3,6 +3,7 @@ import { createEditorStateFromRawDraft} from '../helpers/convert-editor-state.js
 import EditorHeader from './header/editor-header.js';
 import EditorContent from './content/editor-content.js';
 import SaveDraftButton from './button/save-draft-button.js';
+import { articleTypes } from '../article/article-types.js';
 
 class DraftEditor extends React.Component {
     constructor(props) {
@@ -17,7 +18,7 @@ class DraftEditor extends React.Component {
         this.saveDraft = (e) => this.props.onSaveDraft(this.state.editorState);
 
         this.getChildContext = () => {
-            return {articleState: 'EDIT'}
+            return {articleState: articleTypes.EDIT}
         }
     }
 

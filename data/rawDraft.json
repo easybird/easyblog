@@ -11,11 +11,16 @@
       "data": {"url": "mijioj"}
     },
     "2": {
+      "type": "more-info",
+      "mutability": "IMMUTABLE",
+      "data": {"text": "Read more"}
+    },
+    "3": {
       "type": "audio",
       "mutability": "IMMUTABLE",
       "data": {"src": "http://localhost:3000/media/sample.mp3"}
     },
-    "3": {
+    "4": {
       "type": "video",
       "mutability": "IMMUTABLE",
       "data": {"src": "http://localhost:3000/media/sample.mp4"}
@@ -87,6 +92,36 @@
       ]
     },
     {
+      "key": "4kf6s",
+      "text": "Hier is het einde van de eerste paragraaf.",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "4m483",
+      "text": " ",
+      "type": "atomic",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 1,
+          "key": 2
+        }
+      ]
+    },
+    {
+      "key": "1p00v",
+      "text": "Hier is het begin van de tweede paragraaf.",
+      "type": "unstyled",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
       "key": "6d1m8",
       "text": "",
       "type": "unstyled",
@@ -112,7 +147,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 2
+          "key": 3
         }
       ]
     },
@@ -208,7 +243,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 3
+          "key": 4
         }
       ]
     },
