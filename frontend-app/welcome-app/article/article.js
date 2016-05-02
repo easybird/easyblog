@@ -13,7 +13,7 @@ class Article extends React.Component {
             editorState: createEditorStateFromRawDraft(this.prepareDraft(props.rawDraft))
         };
         this.getChildContext = () => {
-            return {articleState: articleTypes.FULL}
+            return {articleState: articleTypes.FULL, articleUrl: this.props.articleUrl}
         }
     }
 
@@ -43,9 +43,14 @@ class Article extends React.Component {
 
         let className = 'card RichEditor-content';
 
+        let titleHeader;
+        if (this.props.title) {
+            titleHeader = <h4 className="header"> {this.props.title} </h4>
+        }
+
         return (
             <div>
-                <h4 className="header"> {this.props.title} </h4>
+                {titleHeader}
                 <div className={className}>
                     <Editor
                         blockStyleFn={blockStyleFn}
@@ -61,7 +66,8 @@ class Article extends React.Component {
 }
 
 Article.childContextTypes = {
-    articleState: React.PropTypes.string
+    articleState: React.PropTypes.string,
+    articleUrl: React.PropTypes.string
 };
 
 Article.propTypes = {
@@ -69,7 +75,8 @@ Article.propTypes = {
     blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
     rawDraft: React.PropTypes.object.isRequired,
-    title: React.PropTypes.string.isRequired
+    articleUrl: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string
 };
 
 export default Article;

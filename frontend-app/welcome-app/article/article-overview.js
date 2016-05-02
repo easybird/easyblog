@@ -8,7 +8,7 @@ class ArticleOverview extends Article {
         super(props);
 
         this.getChildContext = () => {
-            return {articleState: articleTypes.OVERVIEW}
+            return {articleState: articleTypes.OVERVIEW, articleUrl: this.props.articleUrl}
         }
     }
 

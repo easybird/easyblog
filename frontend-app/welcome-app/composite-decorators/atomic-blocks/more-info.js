@@ -6,7 +6,7 @@ class MoreInfo extends React.Component {
 
     render() {
         //TODO fix automatic extra line creation: https://github.com/facebook/draft-js/issues/327
-        const moreInfo = <a href="http://hierKomtDeUrlVanHetArtikel.be" style={styleMap.LINK}>{this.props.text}
+        const moreInfo = <a href={this.context.articleUrl} style={styleMap.LINK}>{this.props.text}
         </a>;
 
         if (this.context.articleState === articleTypes.EDIT) {
@@ -27,7 +27,8 @@ class MoreInfo extends React.Component {
 }
 
 MoreInfo.contextTypes = {
-    articleState: React.PropTypes.string
+    articleState: React.PropTypes.string,
+    articleUrl: React.PropTypes.string
 };
 
 MoreInfo.propTypes = {

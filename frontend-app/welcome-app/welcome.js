@@ -2,6 +2,7 @@ import React from 'react';
 import DraftEditor from './editor/draft-editor.js';
 import Article from './article/article.js';
 import ArticleOverview from './article/article-overview.js';
+import ArticleList from './article/article-list.js';
 import { getBlockStyle, styleMap, getMediaBlockObject} from './constants/styles.js';
 import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
 
@@ -60,6 +61,7 @@ class Welcome extends React.Component {
                                 customStyleMap={customStyleMap}
                                 rawDraft={rawDraft}
                                 title="Small preview:"
+                                articleUrl="http://easybird.be/blog/future-react"
                             />
                         </div>
                         <div className= "col s12 l3">
@@ -69,8 +71,25 @@ class Welcome extends React.Component {
                                 customStyleMap={customStyleMap}
                                 rawDraft={rawDraft}
                                 title="Rendered result:"
+                                articleUrl="http://easybird.be/blog/future-react"
                             />
                         </div>
+                    </div>
+                    <div className="row">
+                        <ArticleList
+                            articles={
+                                [
+                                    {
+                                        url: "http://easybird.be/blog/future-react",
+                                        content: rawDraft
+                                    },
+                                    {
+                                        url: "http://www.easybird.be/en/blog/transform-es6-to-es5-with-babel",
+                                        content: rawDraft
+                                    }
+                                ]
+                                }
+                        />
                     </div>
                 </div>
             </div>
