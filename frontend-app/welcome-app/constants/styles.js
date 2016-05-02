@@ -8,16 +8,25 @@ export const styleMap = {
         fontSize: 14,
         padding: 2,
     },
-    'STRIKETHROUGH': {
-        textDecoration: 'line-through',
-        fontSize:10,
+    STRIKETHROUGH: {
+        textDecoration: 'line-through'
     },
+    LINK: {
+        color: '#8bc34a'
+    },
+    DESCRIPTION: {
+        color: '#999'
+    }
 };
 
 export function getBlockStyle(block) {
     switch (block.getType()) {
         case 'blockquote':
-            return 'RichEditor-blockquote';
+            return 'light';
+        case 'header-five':
+        case 'header-four':
+        case 'header-six':
+            return 'title';
         default:
             return null;
     }

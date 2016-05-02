@@ -1,12 +1,12 @@
 import React from 'react';
-import {styles} from '../link/link.js';
+import { styleMap } from '../../constants/styles.js';
 import { articleTypes } from '../../article/article-types.js';
 
 class MoreInfo extends React.Component {
 
     render() {
         //TODO fix automatic extra line creation: https://github.com/facebook/draft-js/issues/327
-        const moreInfo = <a href="http://hierKomtDeUrlVanHetArtikel.be" style={styles.link}>{this.props.text}
+        const moreInfo = <a href="http://hierKomtDeUrlVanHetArtikel.be" style={styleMap.LINK}>{this.props.text}
         </a>;
 
         if (this.context.articleState === articleTypes.EDIT) {
@@ -14,7 +14,7 @@ class MoreInfo extends React.Component {
                 <div>
                     {moreInfo}
                     <div className="divider"/>
-                    <div style={{color: "#999"}}> Hier wordt het artikel afgebroken in het overzicht</div>
+                    <div style={styleMap.DESCRIPTION}> Hier wordt het artikel afgebroken in het overzicht</div>
                     <div className="divider"/>
                 </div>
             )

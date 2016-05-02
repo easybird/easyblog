@@ -6,8 +6,9 @@ export function parseArticleOverview(rawDraft) {
     let moreInfoEntityKey = findMoreInfoType(overview.entityMap);
 
     if (moreInfoEntityKey) {
-        let blockIndex = overview.blocks.findIndex(containsAtomicEntityKey(moreInfoEntityKey));
-        overview.blocks.splice(blockIndex, overview.blocks.length - blockIndex);
+        let firstIndexAfterMoreInfoBlock = overview.blocks.findIndex(containsAtomicEntityKey(moreInfoEntityKey)) + 1;
+
+        overview.blocks.splice(firstIndexAfterMoreInfoBlock, overview.blocks.length - firstIndexAfterMoreInfoBlock);
     }
 
     return overview;

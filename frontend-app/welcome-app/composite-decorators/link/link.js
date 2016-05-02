@@ -1,19 +1,13 @@
 import React from 'react';
 import { Entity } from 'draft-js';
+import { styleMap } from '../../constants/styles.js';
 
 export const Link = (props) => {
     const {url} = Entity.get(props.entityKey).getData();
 
     return (
-        <a href={url} style={styles.link} target="_blank">
+        <a href={url} style={styleMap.LINK} target="_blank">
             {props.children}
         </a>
     );
 };
-
-export const styles = {
-    link: {
-        color: '#8bc34a'
-    }
-};
-

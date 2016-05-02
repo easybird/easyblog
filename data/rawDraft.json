@@ -1,26 +1,31 @@
 {
   "entityMap": {
     "0": {
+      "type": "LINK",
+      "mutability": "MUTABLE",
+      "data": {"url": "http://www.artikeltitel.com"}
+    },
+    "1": {
       "type": "image",
       "mutability": "IMMUTABLE",
       "data": {"src": "http://localhost:3000/media/sample.jpg"}
     },
-    "1": {
+    "2": {
       "type": "LINK",
       "mutability": "MUTABLE",
       "data": {"url": "mijioj"}
     },
-    "2": {
+    "3": {
       "type": "more-info",
       "mutability": "IMMUTABLE",
       "data": {"text": "Read more"}
     },
-    "3": {
+    "4": {
       "type": "audio",
       "mutability": "IMMUTABLE",
       "data": {"src": "http://localhost:3000/media/sample.mp3"}
     },
-    "4": {
+    "5": {
       "type": "video",
       "mutability": "IMMUTABLE",
       "data": {"src": "http://localhost:3000/media/sample.mp4"}
@@ -29,6 +34,28 @@
   "blocks": [
     {
       "key": "ejddc",
+      "text": "Dit is de artikel titel!",
+      "type": "header-four",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": [
+        {
+          "offset": 0,
+          "length": 24,
+          "key": 0
+        }
+      ]
+    },
+    {
+      "key": "9c0ih",
+      "text": "En dit is de ondertitel.",
+      "type": "header-five",
+      "depth": 0,
+      "inlineStyleRanges": [],
+      "entityRanges": []
+    },
+    {
+      "key": "46gdb",
       "text": "",
       "type": "unstyled",
       "depth": 0,
@@ -45,7 +72,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 0
+          "key": 1
         }
       ]
     },
@@ -87,7 +114,7 @@
         {
           "offset": 0,
           "length": 4,
-          "key": 1
+          "key": 2
         }
       ]
     },
@@ -109,7 +136,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 2
+          "key": 3
         }
       ]
     },
@@ -147,7 +174,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 3
+          "key": 4
         }
       ]
     },
@@ -243,7 +270,7 @@
         {
           "offset": 0,
           "length": 1,
-          "key": 4
+          "key": 5
         }
       ]
     },
