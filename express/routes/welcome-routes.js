@@ -1,19 +1,23 @@
 import express from 'express';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
-import Welcome from '../frontend-app/welcome-app/welcome.js';
-import config from '../config.json';
+import Welcome from '../../frontend-app/welcome-app/welcome.js';
+import { addInitialRenderData } from '../../middleware/rendering/render-data.js';
+import rawDraft from '../../data/rawDraft.json';
+import { REACT } from '../../config-loader.js';
 
 var router = express.Router();
 
 router.get('/',
+    addInitialRenderData,
     compileReactWelcomeApp,
     renderHomePage
 );
 
 function compileReactWelcomeApp(req, res, next) {
     var props = {
-        title: 'Welcome to Easyblog!'
+        title: req.renderData.metaData.title,
+        initialRawDraft: rawDraft
     };
 
     try {
@@ -27,7 +31,7 @@ function compileReactWelcomeApp(req, res, next) {
     (!req.renderData) ? req.renderData = {} : undefined;
     req.renderData.react = {
         renderedApp: welcomeApp,
-        bundle: config.react.htmlDir + config.react.components.welcome.bundle,
+        bundle: REACT.htmlDir + REACT.components.welcome.bundle,
         initProps: props
     };
 

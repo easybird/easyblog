@@ -1,8 +1,14 @@
+@import url("rich-editor/editor.css");
+
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #8bc34a;
+}
+
+.header {
+    color: #ef5350;
+    font-weight: 300;
 }

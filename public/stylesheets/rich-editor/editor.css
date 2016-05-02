@@ -1,0 +1,60 @@
+@import "blockStyleFn/block-style.css";
+
+.RichEditor-root {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+/*HEADER*/
+.RichEditor-header {
+    background: #CDDC39;
+    font-family: 'Georgia', serif;
+    padding: 15px;
+}
+
+.RichEditor-header-controls {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    user-select: none;
+}
+
+/*CONTENT*/
+.RichEditor-content {
+    border-top: 1px solid #ddd;
+    cursor: text;
+    margin-top: 10px;
+}
+
+.RichEditor-content .public-DraftEditorPlaceholder-root,
+.RichEditor-content .public-DraftEditor-content {
+    margin: 0 -15px -15px;
+    padding: 15px;
+}
+
+.RichEditor-content .public-DraftEditor-content {
+    min-height: 100px;
+}
+
+.RichEditor-hidePlaceholder .public-DraftEditorPlaceholder-root {
+    display: none;
+}
+
+.RichEditor-content .public-DraftStyleDefault-pre {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-family: 'Inconsolata', 'Menlo', 'Consolas', monospace;
+    font-size: 16px;
+    padding: 20px;
+}
+
+.RichEditor-styleButton {
+    color: #999;
+    cursor: pointer;
+    margin-right: 16px;
+    padding: 2px 0;
+    display: inline-block;
+}
+
+.RichEditor-activeButton {
+    color: #ef5350;
+}
