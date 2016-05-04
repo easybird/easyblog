@@ -1,6 +1,6 @@
 import React from 'react';
 import { styleMap } from '../../constants/styles.js';
-import { articleTypes } from '../../article/article-types.js';
+import { articleTypes } from '../../article-types.js';
 
 class MoreInfo extends React.Component {
 

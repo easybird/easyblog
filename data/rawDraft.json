@@ -1,294 +1,570 @@
 {
-  "entityMap": {
-    "0": {
-      "type": "LINK",
-      "mutability": "MUTABLE",
-      "data": {"url": "http://www.artikeltitel.com"}
+  "entityMap" : {
+    "0" : {
+      "type" : "LINK",
+      "mutability" : "MUTABLE",
+      "data" : {
+        "url" : "http://www.easybird.be/en/blog/introduction-to-pencilblue"
+      }
     },
-    "1": {
-      "type": "image",
-      "mutability": "IMMUTABLE",
-      "data": {"src": "http://localhost:3000/media/sample.jpg"}
+    "1" : {
+      "type" : "image",
+      "mutability" : "IMMUTABLE",
+      "data" : {
+        "src" : "http://www.easybird.be/images/blog/posts/easyblog/3.png"
+      }
     },
-    "2": {
-      "type": "LINK",
-      "mutability": "MUTABLE",
-      "data": {"url": "mijioj"}
+    "2" : {
+      "type" : "LINK",
+      "mutability" : "MUTABLE",
+      "data" : {
+        "url" : "https://github.com/pencilblue/pencilblue#readme"
+      }
     },
-    "3": {
-      "type": "more-info",
-      "mutability": "IMMUTABLE",
-      "data": {"text": "Read more"}
+    "3" : {
+      "type" : "image",
+      "mutability" : "IMMUTABLE",
+      "data" : {
+        "src" : "http://www.easybird.be/images/blog/posts/easyblog/3a.jpg"
+      }
     },
-    "4": {
-      "type": "audio",
-      "mutability": "IMMUTABLE",
-      "data": {"src": "http://localhost:3000/media/sample.mp3"}
+    "4" : {
+      "type" : "LINK",
+      "mutability" : "MUTABLE",
+      "data" : {
+        "url" : "https://github.com/easybird/easybird.be_blog/commit/3f70b7d0e2dddc229cc6ca6f49b5d4698ebe2a34"
+      }
     },
-    "5": {
-      "type": "video",
-      "mutability": "IMMUTABLE",
-      "data": {"src": "http://localhost:3000/media/sample.mp4"}
+    "5" : {
+      "type" : "LINK",
+      "mutability" : "MUTABLE",
+      "data" : {
+        "url" : "https://github.com/pencilblue"
+      }
+    },
+    "6" : {
+      "type" : "LINK",
+      "mutability" : "MUTABLE",
+      "data" : {
+        "url" : "http://www.pencilblue.org/"
+      }
     }
   },
-  "blocks": [
+  "blocks" : [
     {
-      "key": "ejddc",
-      "text": "Dit is de artikel titel!",
-      "type": "header-four",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": [
+      "key" : "ejddc",
+      "text" : "Introduction to pencilblue",
+      "type" : "header-four",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
         {
-          "offset": 0,
-          "length": 24,
-          "key": 0
+          "offset" : 0,
+          "length" : 26,
+          "key" : 0
         }
       ]
     },
     {
-      "key": "9c0ih",
-      "text": "En dit is de ondertitel.",
-      "type": "header-five",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
+      "key" : "3tm6m",
+      "text" : "Getting started",
+      "type" : "header-five",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
     },
     {
-      "key": "46gdb",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
+      "key" : "824a",
+      "text" : "Jan 6, 2016",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
     },
     {
-      "key": "3d87s",
-      "text": " ",
-      "type": "atomic",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": [
+      "key" : "93ktt",
+      "text" : " ",
+      "type" : "atomic",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
         {
-          "offset": 0,
-          "length": 1,
-          "key": 1
+          "offset" : 0,
+          "length" : 1,
+          "key" : 1
         }
       ]
     },
     {
-      "key": "bihqe",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
+      "key" : "1n2ft",
+      "text" : "Getting things up and running",
+      "type" : "header-five",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
     },
     {
-      "key": "9tj9d",
-      "text": "test",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [
+      "key" : "cc3jh",
+      "text" : "Setting up Pencilblue as your CMS system is a peace of cake for a developer.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "2d7ku",
+      "text" : "Go to their Github page",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
         {
-          "offset": 0,
-          "length": 4,
-          "style": "ITALIC"
+          "offset" : 12,
+          "length" : 11,
+          "key" : 2
+        }
+      ]
+    },
+    {
+      "key" : "bkc65",
+      "text" : "Read the Quickstart Guide in their Readme file to get things up and running",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "6l9s0",
+      "text" : "Only prerequisite is to have mongodb and nodejs installed locally",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "btujd",
+      "text" : "To be clear: the setup part is very well documented.",
+      "type" : "blockquote",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "bu84s",
+      "text" : "Unfortunately, apart for some long explanatory tutorials, it's the only part that is very well documented.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "8ug15",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "810l5",
+      "text" : "Another minor problems could be that the contributors seem less and less interested in the project themself (cfr. the commits in their Github repository).",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "84qpm",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "3qo6g",
+      "text" : " ",
+      "type" : "atomic",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
+        {
+          "offset" : 0,
+          "length" : 1,
+          "key" : 3
+        }
+      ]
+    },
+    {
+      "key" : "9egef",
+      "text" : "Nevertheless, the project still felt \"right\" to me, so I thought I should give it a try.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "5se30",
+      "text" : "Basic principles of Pencilblue",
+      "type" : "header-five",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "ee992",
+      "text" : "To make a long story short, basically, what PencilBlue does is the following. It provides you a good working full blown out-of-the-box Content Management System in a default theme:",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "fvtdp",
+      "text" : "Writing basic articles (WYSIWYG editor and HTML editor)",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "ahl3j",
+      "text" : "Adding images",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "4682l",
+      "text" : "Adding embedded videos, from Youtube, Vimeo and all sorts of other sites",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "g2tl",
+      "text" : "Manage comments",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "58kjl",
+      "text" : "Handle SEO",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "aeodq",
+      "text" : "Handle navigations",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "f1cbr",
+      "text" : "Users management",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "dmlt0",
+      "text" : "Multi language support",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "21cgg",
+      "text" : "So, out of the box, there are a lot of basic features. But the idea is that the platform is highly pluggable and customisable.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "9ifeu",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "25elt",
+      "text" : "Once you get the basic idea, customising the css templating is rather easy. As can be seen inthis commit on my github account, the only thing that needs to be done is adding a new folder in the plugins folder. The idea is that you only create the files in this folder which will have to overwrite the default theme. Let's say you only want to adapt the header, then this is what you do:",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
+        {
+          "offset" : 93,
+          "length" : 11,
+          "key" : 4
+        }
+      ]
+    },
+    {
+      "key" : "4ma65",
+      "text" : "Go to plugins/pencilblue/templates/head.html (pencilblue is the basic theme)",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "e8i5q",
+      "text" : "Copy the file to plugins/*yourPlugin*/templates/head.html",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "9n2sv",
+      "text" : "Adapt the last file to fit your needs",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "83cq9",
+      "text" : "Once you have done this, you can install *yourPlugin* in the admin section (Plugins/Manage) and set it as your basic theme (Plugins/Themes). Now, you will see that all your created articles will contain the new head.html file.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "p8rq",
+      "text" : "Tip: Check out and try all existing Plugins before you start developing your own, some of them may be very close to your needs",
+      "type" : "blockquote",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "9uok3",
+      "text" : "First impressions using the framework",
+      "type" : "header-five",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "7auv0",
+      "text" : "As a user writing articles",
+      "type" : "header-six",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "1pmq0",
+      "text" : "The editor does the basic trick. You can write articles and format the stuff. You can add media, but not position it perfectly in the editor. We have to be honest, it doesn't feel like a very mature \"what you see is what you get\" editor. Luckily there is the HTML tab, in which you can verify and correct if needed. Luckily there is also the preview button at the bottom of the page where you can check how the article will really look when published.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "afio0",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "fgrau",
+      "text" : "As an administrator, managing the content",
+      "type" : "header-six",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "9vh8t",
+      "text" : "From what I have checked out myself, this seems to be working very smoothly!",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "evav0",
+      "text" : "As a developer",
+      "type" : "header-six",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "83pcq",
+      "text" : "The good, the bad and the ugly",
+      "type" : "blockquote",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "p8ig",
+      "text" : "The good",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [
+        {
+          "offset" : 0,
+          "length" : 8,
+          "style" : "BOLD"
         }
       ],
-      "entityRanges": []
+      "entityRanges" : []
     },
     {
-      "key": "ek0v3",
-      "text": "test",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [
+      "key" : "11s98",
+      "text" : "Easy to setup.",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "28b1q",
+      "text" : "Nice approach on how you can overwrite html partials",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "1vbgo",
+      "text" : "Easy to plugin new features.",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "btg2m",
+      "text" : "Easy to overwrite or customise existing features.",
+      "type" : "unordered-list-item",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "epjra",
+      "text" : "The bad",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [
         {
-          "offset": 0,
-          "length": 4,
-          "style": "BOLD"
+          "offset" : 0,
+          "length" : 7,
+          "style" : "BOLD"
         }
       ],
-      "entityRanges": [
+      "entityRanges" : []
+    },
+    {
+      "key" : "ebuaa",
+      "text" : "Didn't find a lot of good examples, so learning by example wasn't that easy.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "eq0f6",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "bscrs",
+      "text" : "The ugly",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [
         {
-          "offset": 0,
-          "length": 4,
-          "key": 2
-        }
-      ]
-    },
-    {
-      "key": "4kf6s",
-      "text": "Hier is het einde van de eerste paragraaf.",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "4m483",
-      "text": " ",
-      "type": "atomic",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": [
-        {
-          "offset": 0,
-          "length": 1,
-          "key": 3
-        }
-      ]
-    },
-    {
-      "key": "1p00v",
-      "text": "Hier is het begin van de tweede paragraaf.",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "6d1m8",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "crmoh",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "bssa6",
-      "text": " ",
-      "type": "atomic",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": [
-        {
-          "offset": 0,
-          "length": 1,
-          "key": 4
-        }
-      ]
-    },
-    {
-      "key": "8v560",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "b1knu",
-      "text": "code block",
-      "type": "code-block",
-      "depth": 0,
-      "inlineStyleRanges": [
-        {
-          "offset": 0,
-          "length": 10,
-          "style": "BOLD"
+          "offset" : 0,
+          "length" : 8,
+          "style" : "BOLD"
         }
       ],
-      "entityRanges": []
+      "entityRanges" : []
     },
     {
-      "key": "eae2k",
-      "text": "//test",
-      "type": "code-block",
-      "depth": 0,
-      "inlineStyleRanges": [
+      "key" : "b83dq",
+      "text" : "Moreover, the core codebase of Pencilblue contains huge files which are tightly coupled to each other. This frightens me, in a world where - also front-end - development evolves - for the good - towards small standalone component-based features.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "24n5t",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "77set",
+      "text" : "Test coverage of the codebase is currently only 24%.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "cukb8",
+      "text" : "",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "7alr5",
+      "text" : "Overall impressions",
+      "type" : "header-five",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : []
+    },
+    {
+      "key" : "s0tb",
+      "text" : "For now, Pencilblue does the trick for me personally, but I wouldn't recommend it to my clients yet. Pencilblue feels like a platform which is using the right technology stack, with the right vision, but both the look and feel and the implementation could still be improved. The platform has a roadmap towards the future, and seems to have a lot of ambition when reading their github and webpage, but the lack of current activity on their github accounts doesn't seem to be underlining this ambition.",
+      "type" : "unstyled",
+      "depth" : 0,
+      "inlineStyleRanges" : [],
+      "entityRanges" : [
         {
-          "offset": 0,
-          "length": 6,
-          "style": "BOLD"
-        }
-      ],
-      "entityRanges": []
-    },
-    {
-      "key": "7vojs",
-      "text": "",
-      "type": "code-block",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "8ug30",
-      "text": "",
-      "type": "code-block",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "dmtm2",
-      "text": "block quote",
-      "type": "blockquote",
-      "depth": 0,
-      "inlineStyleRanges": [
+          "offset" : 377,
+          "length" : 6,
+          "key" : 5
+        },
         {
-          "offset": 0,
-          "length": 11,
-          "style": "BOLD"
-        }
-      ],
-      "entityRanges": []
-    },
-    {
-      "key": "4v3tq",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "9kegn",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "ah21e",
-      "text": " ",
-      "type": "atomic",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": [
-        {
-          "offset": 0,
-          "length": 1,
-          "key": 5
+          "offset" : 388,
+          "length" : 7,
+          "key" : 6
         }
       ]
-    },
-    {
-      "key": "7p6jv",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
-    },
-    {
-      "key": "4q8vc",
-      "text": "",
-      "type": "unstyled",
-      "depth": 0,
-      "inlineStyleRanges": [],
-      "entityRanges": []
     }
   ]
 }

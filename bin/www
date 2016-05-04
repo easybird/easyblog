@@ -24,6 +24,7 @@ compileFrontEnd()
 
 function compileFrontEnd() {
     return new Promise(function (resolve) {
+
         console.log("Start compiling front-end...");
         var webpack = require('webpack');
         var webpackConfig = process.env.NODE_ENV === "production" ? require('../webpack.prod.config.js') : require('../webpack.config.js');

@@ -1,10 +1,11 @@
 import React from 'react';
-import DraftEditor from './editor/draft-editor.js';
-import Article from './article/article.js';
-import ArticleOverview from './article/article-overview.js';
-import ArticleList from './article/article-list.js';
-import { getBlockStyle, styleMap, getMediaBlockObject} from './constants/styles.js';
-import { convertToRawDraftContentState } from './helpers/convert-editor-state.js';
+import DraftEditor from '../article/editor/draft-editor.js';
+import Article from '../article/article.js';
+import ArticleOverview from '../article/article-overview.js';
+import ArticleList from '../article/api/article-list/article-list.js';
+import ArticlePage from '../article/api/article-page/article-page.js';
+import { getBlockStyle, styleMap, getMediaBlockObject, articleStyle} from '../article/constants/styles.js';
+import { convertToRawDraftContentState } from '../article/helpers/convert-editor-state.js';
 
 class Welcome extends React.Component {
 
@@ -36,6 +37,7 @@ class Welcome extends React.Component {
         const blockStyleFn = getBlockStyle;
         const blockRendererFn = getMediaBlockObject;
         const customStyleMap = styleMap;
+        const customArticleStyle = articleStyle;
         const onSaveDraft = this._onSaveDraft;
 
         return (
@@ -51,10 +53,11 @@ class Welcome extends React.Component {
                                 blockStyleFn={ blockStyleFn}
                                 blockRendererFn={blockRendererFn}
                                 customStyleMap= {customStyleMap}
+                                articleStyle= {customArticleStyle}
                                 initialRawDraft={initialRawDraft}
                             />
                         </div>
-                        <div className= "col s12 l3">
+                        <div className= "col s12 l3" style={articleStyle}>
                             <ArticleOverview
                                 blockStyleFn={blockStyleFn}
                                 blockRendererFn={blockRendererFn}
@@ -64,7 +67,7 @@ class Welcome extends React.Component {
                                 articleUrl="http://easybird.be/blog/future-react"
                             />
                         </div>
-                        <div className= "col s12 l3">
+                        <div className= "col s12 l3" style={articleStyle}>
                             <Article
                                 blockStyleFn={blockStyleFn}
                                 blockRendererFn={blockRendererFn}
@@ -80,15 +83,23 @@ class Welcome extends React.Component {
                             articles={
                                 [
                                     {
-                                        url: "http://easybird.be/blog/future-react",
+                                        articleUrl: "http://easybird.be/blog/future-react",
                                         content: rawDraft
                                     },
                                     {
-                                        url: "http://www.easybird.be/en/blog/transform-es6-to-es5-with-babel",
+                                        articleUrl: "http://www.easybird.be/en/blog/transform-es6-to-es5-with-babel",
                                         content: rawDraft
                                     }
                                 ]
                                 }
+                        />
+                    </div>
+                    <div className="row">
+                        <ArticlePage
+                            article={{
+                                articleUrl: "http://easybird.be/blog/future-react",
+                                content: rawDraft
+                            }}
                         />
                     </div>
                 </div>

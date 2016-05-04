@@ -2,6 +2,8 @@ node_modules
 config.json
 npm-debug.log
 public/javascripts/react/*
+dist
+lib
 
 # Intellij - WebStorm
 .idea/

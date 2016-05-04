@@ -3,7 +3,7 @@ import { createEditorStateFromRawDraft} from '../helpers/convert-editor-state.js
 import EditorHeader from './header/editor-header.js';
 import EditorContent from './content/editor-content.js';
 import SaveDraftButton from './button/save-draft-button.js';
-import { articleTypes } from '../article/article-types.js';
+import { articleTypes } from '../article-types.js';
 
 class DraftEditor extends React.Component {
     constructor(props) {
@@ -27,7 +27,7 @@ class DraftEditor extends React.Component {
 
         return (
             <div>
-                <div className="card RichEditor-root">
+                <div className="card RichEditor-root" style={this.props.articleStyle}>
                     < EditorHeader
                         editorState={editorState}
                         onChange={this.onChange}
@@ -61,6 +61,7 @@ DraftEditor.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
     blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
+    articleStyle: React.PropTypes.object.isRequired,
     initialRawDraft: React.PropTypes.object.isRequired,
     onSaveDraft: React.PropTypes.func.isRequired
 };
