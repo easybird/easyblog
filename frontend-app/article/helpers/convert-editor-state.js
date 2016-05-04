@@ -3,10 +3,10 @@ import { linkDecorator } from '../composite-decorators/link/link-decorator.js';
 
 export function createEditorStateFromRawDraft(rawDraft) {
     if (rawDraft) {
-        let blockArray = convertFromRaw(rawDraft);
+        let contentState = convertFromRaw(rawDraft);
 
         return EditorState.createWithContent(
-            ContentState.createFromBlockArray(blockArray),
+            contentState,
             linkDecorator
         );
     }
