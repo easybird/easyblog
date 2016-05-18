@@ -4,6 +4,10 @@ a {
   color: #5d4037;
 }
 
+a:hover {
+  color: #a1887f;
+}
+
 .header {
     color: #ffab40;
     font-weight: 300;
@@ -24,4 +28,16 @@ nav a {
 .nav-wrapper .brand-logo img {
     margin-top: 8px;
     height: 48px;
+}
+
+.tabs .tab a {
+    color: #5d4037;
+}
+
+.tabs .tab a:hover {
+    color: #a1887f;
+}
+
+.tabs .indicator {
+    background-color: #5d4037;
 }

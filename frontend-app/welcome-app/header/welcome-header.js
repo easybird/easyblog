@@ -3,9 +3,7 @@ import WelcomeAppBar from './welcome-app-bar.js';
 import WelcomeParallax from './welcome-parallax.js';
 
 const navBarElements = [
-    {isActive:true, id:"link", text:"Editor"},
-    {id:"link2", text:"Teaser preview"},
-    {id:"link3", text:"Rendered result"}
+    {isActive:true, id:"editor", text:"Editor"}
 ];
 
 const WelcomeHeader = ({title, subTitle}) => (

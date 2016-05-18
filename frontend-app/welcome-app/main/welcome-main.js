@@ -45,6 +45,20 @@ class WelcomeMain extends React.Component {
                 <div className= "container">
                     <div className= "row">
                         <div className= "col s12">
+                            <ul className="tabs">
+                                <li className="tab col s4">
+                                    <a href="#editor">Editor</a>
+                                </li>
+                                <li className="tab col s4">
+                                    <a href="#teaser">Teaser</a>
+                                </li>
+                                <li className="tab col s4">
+                                    <a href="#article">Article</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="section"/>
+                        <div id="editor" className= "col s12">
                             <DraftEditor
                                 onSaveDraft={ onSaveDraft }
                                 blockStyleFn={ blockStyleFn}
@@ -54,7 +68,7 @@ class WelcomeMain extends React.Component {
                                 initialRawDraft={initialRawDraft}
                             />
                         </div>
-                        <div className= "col s12 l6" style={articleStyle}>
+                        <div id="teaser" className= "col s12" style={articleStyle}>
                             <ArticleOverview
                                 blockStyleFn={blockStyleFn}
                                 blockRendererFn={blockRendererFn}
@@ -64,7 +78,7 @@ class WelcomeMain extends React.Component {
                                 articleUrl="http://easybird.be/blog/future-react"
                             />
                         </div>
-                        <div className= "col s12 l6" style={articleStyle}>
+                        <div id="article" className= "col s12" style={articleStyle}>
                             <Article
                                 blockStyleFn={blockStyleFn}
                                 blockRendererFn={blockRendererFn}

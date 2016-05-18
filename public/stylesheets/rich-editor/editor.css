@@ -2,13 +2,11 @@
 
 .RichEditor-root {
     background: #fff;
-    border: 1px solid #ddd;
 }
 
 /*HEADER*/
 .RichEditor-header {
     background: #ffab40;
-    font-family: 'Georgia', serif;
     padding: 15px;
 }
 
@@ -23,7 +21,6 @@
 .RichEditor-content {
     border-top: 1px solid #ddd;
     cursor: text;
-    margin-top: 10px;
 }
 
 .RichEditor-content .public-DraftEditorPlaceholder-root,
