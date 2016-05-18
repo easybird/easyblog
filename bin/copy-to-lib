@@ -1,4 +1,5 @@
 var copyDir = require("copy-dir");
 console.log("Copy files to lib...");
+
 copyDir.sync('./frontend-app/article', './lib/');
 console.log("End copy files to lib");

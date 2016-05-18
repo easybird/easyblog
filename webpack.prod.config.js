@@ -4,7 +4,7 @@ var APP_DIR = path.resolve(__dirname, reactConfig.appDir);
 var BUILD_DIR = path.resolve(__dirname, reactConfig.buildDir);
 
 var config = {
-    devtool: 'eval',
+    devtool: 'source-map',
     entry: {
         welcome: APP_DIR + "/" + reactConfig.components.welcome.entry
     },

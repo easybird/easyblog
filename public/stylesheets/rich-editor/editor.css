@@ -7,7 +7,7 @@
 
 /*HEADER*/
 .RichEditor-header {
-    background: #CDDC39;
+    background: #ffab40;
     font-family: 'Georgia', serif;
     padding: 15px;
 }
@@ -48,7 +48,7 @@
 }
 
 .RichEditor-styleButton {
-    color: #999;
+    color: #5d4037;
     cursor: pointer;
     margin-right: 16px;
     padding: 2px 0;
@@ -56,5 +56,5 @@
 }
 
 .RichEditor-activeButton {
-    color: #ef5350;
+    color: #ddd;
 }
