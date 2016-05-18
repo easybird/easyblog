@@ -37,24 +37,28 @@ class EditorHeader extends React.Component {
 
         return (
             <div className="RichEditor-header">
-                <BlockStyleHeaderControls
-                    editorState={editorState}
-                    onToggle={this.toggleBlockType}
-                />
-                <InlineStyleHeaderControls
-                    editorState={editorState}
-                    onToggle={this.toggleInlineStyle}
-                />
-                <LinkHeaderControls
-                    editorState={editorState}
-                    onChange={this.onChange}
-                    onFocus={onFocus}
-                />
-                <MediaHeaderControls
-                    editorState={editorState}
-                    onChange={this.onChange}
-                    onFocus={onFocus}
-                />
+                <div className="RichEditor-header-controls">
+                    <BlockStyleHeaderControls
+                        editorState={editorState}
+                        onToggle={this.toggleBlockType}
+                    />
+                    <InlineStyleHeaderControls
+                        editorState={editorState}
+                        onToggle={this.toggleInlineStyle}
+                    />
+                    <div>
+                        <LinkHeaderControls
+                            editorState={editorState}
+                            onChange={this.onChange}
+                            onFocus={onFocus}
+                        />
+                        <MediaHeaderControls
+                            editorState={editorState}
+                            onChange={this.onChange}
+                            onFocus={onFocus}
+                        />
+                    </div>
+                </div>
             </div>
         )
     }

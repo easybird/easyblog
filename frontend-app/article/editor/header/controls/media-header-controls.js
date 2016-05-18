@@ -110,7 +110,7 @@ class MediaHeaderControls extends React.Component {
         }
 
         return (
-            <div>
+            <div style={{display: 'inline-block'}}>
                 <StyleButton
                     key={atomicBlockTypes.AUDIO}
                     active={type === atomicBlockTypes.AUDIO}

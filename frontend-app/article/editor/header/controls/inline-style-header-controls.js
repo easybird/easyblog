@@ -5,7 +5,7 @@ import { INLINE_STYLES } from '../inline-style-types.js';
 export const InlineStyleHeaderControls = (props) => {
     var currentStyle = props.editorState.getCurrentInlineStyle();
     return (
-        <div className="RichEditor-header-controls">
+        <div style={{display: 'inline-block'}}>
             {INLINE_STYLES.map(type =>
                     <StyleButton
                         key={type.label}

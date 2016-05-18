@@ -105,7 +105,7 @@ class LinkHeaderControls extends React.Component {
         }
 
         return (
-            <div>
+            <div style={{display: 'inline-block'}}>
                 <StyleButton
                     key='add_link'
                     active={type === 'add_link'}

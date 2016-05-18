@@ -11,7 +11,7 @@ export const BlockStyleHeaderControls = (props) => {
         .getType();
 
     return (
-        <div className="RichEditor-header-controls">
+        <div style={{display: 'inline-block'}}>
             {BLOCK_TYPES.map((type) =>
                     <StyleButton
                         key={type.label}
