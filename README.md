@@ -11,7 +11,7 @@ Under construction
 
 ## How to use the Blog Viewer
 ### In your React application
-Example: https://github.com/easybird/easyblog/blob/develop/frontend-app/welcome-app/welcome.js
+Example: https://github.com/easybird/easyblog/blob/develop/core/welcome-app/welcome.js
 
 Include React component:
 

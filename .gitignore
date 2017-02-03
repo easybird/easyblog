@@ -1,7 +1,7 @@
 node_modules
-config.json
+docs/config.json
 npm-debug.log
-public/javascripts/react/*
+docs/public/javascripts/react/*
 dist
 lib
 

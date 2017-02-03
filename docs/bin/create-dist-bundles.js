@@ -1,6 +1,6 @@
 console.log("Start compiling to es5...");
 var webpack = require('webpack');
-var webpackConfig = require('../webpack.publish.config.js');
+var webpackConfig = require('../docs/webpack.publish.config.js');
 
 webpack(webpackConfig, function (err, stats) {
     try {
