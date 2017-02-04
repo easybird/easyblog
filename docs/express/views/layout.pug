@@ -2,7 +2,6 @@ doctype html
 html
   head
     block stylesheets
-        link(rel='stylesheet' type='text/css' href=layout.materializeCss media='screen,projection')
         link(rel='stylesheet' type='text/css' href=layout.css media='screen,projection')
     block meta
         meta(charset="utf-8")
@@ -12,7 +11,3 @@ html
   body
     block content
     block javascripts
-        //-Import jQuery before materialize.js
-        script(type='text/javascript' src=layout.jquery)
-        script(type='text/javascript' src=layout.materializeJs)
-        script(type='text/javascript' src=layout.cssJs)

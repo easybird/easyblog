@@ -1,0 +1,55 @@
+{
+  "development": {
+    "layout": {
+      "css": "/stylesheets/style.css",
+      "externalScripts": false
+    },
+    "db": {
+    }
+  },
+  "test": {
+    "layout": {
+      "css": "/stylesheets/style.css",
+      "externalScripts": false
+    },
+    "db": {
+    }
+  },
+  "production": {
+    "layout": {
+      "css": "/stylesheets/style.css",
+      "externalScripts": true
+    },
+    "db": {
+    }
+  },
+  "react": {
+    "appDir1": "express/views/app",
+    "appDir2": "../core",
+    "buildDir": "public/javascripts/react",
+    "htmlDir": "/javascripts/react/",
+    "publishDir": "dist",
+    "components": {
+      "welcome": {
+        "entry": "welcome-app.js",
+        "bundle": "welcome.bundle.js"
+      }
+    }
+  },
+  "reactPublish": {
+    "appDir": "../core",
+    "buildDir": "public/javascripts/react",
+    "htmlDir": "/javascripts/react/",
+    "publishDir": "dist",
+    "components": {
+      "articleList": {
+        "entry": "article/api/article-list/article-list-app.js",
+        "bundle": "article-list.bundle.js"
+      },
+      "articlePage": {
+        "entry": "article/api/article-page/article-page-app.js",
+        "bundle": "article-page.bundle.js"
+      }
+    }
+  }
+}

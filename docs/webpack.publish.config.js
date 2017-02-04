@@ -1,4 +1,4 @@
-var reactConfig = require("./config.json").react;
+var reactConfig = require("./config.json").reactPublish;
 var path = require('path');
 var APP_DIR = path.resolve(__dirname, reactConfig.appDir);
 var PUBLISH_DIR = path.resolve(__dirname, reactConfig.publishDir);

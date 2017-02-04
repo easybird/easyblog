@@ -5,7 +5,7 @@ import EditorContent from './content/editor-content.js';
 import SaveDraftButton from './button/save-draft-button.js';
 import { articleTypes } from '../article-types.js';
 
-class DraftEditor extends React.Component {
+class EasyBlog extends React.Component {
     constructor(props) {
         super(props);
 
@@ -53,11 +53,11 @@ class DraftEditor extends React.Component {
     }
 }
 
-DraftEditor.childContextTypes = {
+EasyBlog.childContextTypes = {
     articleState: React.PropTypes.string
 };
 
-DraftEditor.propTypes = {
+EasyBlog.propTypes = {
     blockStyleFn: React.PropTypes.func.isRequired,
     blockRendererFn: React.PropTypes.func.isRequired,
     customStyleMap: React.PropTypes.object.isRequired,
@@ -65,4 +65,4 @@ DraftEditor.propTypes = {
     initialRawDraft: React.PropTypes.object.isRequired,
     onSaveDraft: React.PropTypes.func.isRequired
 };
-export default DraftEditor;
+export default EasyBlog;

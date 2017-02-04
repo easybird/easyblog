@@ -14,15 +14,6 @@ export function setViewEngine(app) {
 
     function addPublicFiles(app) {
         app.use(express.static(path.join(BASE_PATH, 'public')));
-
-        // make draft-js javascript publicly available
-        app.use('/draft-js', express.static(path.join(process.cwd(), 'node_modules', 'draft-js', 'dist')));
-
-        // make jquery publicly available
-        app.use('/jquery', express.static(path.join(process.cwd(), 'node_modules', 'jquery', 'dist')));
-
-        // make materialize publicly available
-        app.use('/materialize-css', express.static(path.join(process.cwd(), 'node_modules', 'materialize-css', 'dist')));
     }
 }
 

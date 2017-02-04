@@ -11,14 +11,11 @@ class Welcome extends React.Component {
             <div>
                 <WelcomeHeader
                     title={title}
-                    subTitle="Here is an example of the draft-js framework of facebook:"
+                    subTitle="Here is an example of how the use of this editor looks like:"
                 />
                 <WelcomeMain
                     initialRawDraft={initialRawDraft}
                 />
-                <footer>
-                    dit is de footer
-                </footer>
             </div>
         );
     }

@@ -1,7 +1,7 @@
 import express from 'express';
 import ReactDOMServer from 'react-dom/server';
 import React from 'react';
-import Welcome from '../../../core/welcome-app/welcome.js';
+import Welcome from '../views/app/welcome.js';
 import { addInitialRenderData } from '../../middleware/rendering/render-data.js';
 import rawDraft from '../../data/rawDraft.json';
 import { REACT } from '../../config-loader.js';
