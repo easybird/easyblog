@@ -16,12 +16,16 @@ var config = {
   module: {
     loaders: [
       {
-        loader: 'babel-loader',
+        loader: 'babel',
         include: [APP_DIR1, APP_DIR2],
         test: /\.js$/,
         query: {
-          presets: ["es2015", "react"]
+          presets: ["es2015", "react", "stage-0"]
         }
+      },
+      {
+        test: [/plugin\.css$/, /\.css$/],
+        loaders: ['style', 'css']
       }
     ]
   }
